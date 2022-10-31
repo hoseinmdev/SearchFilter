@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "title": "ساعت مچی کاسیو",
+      "price": 657660,
+      "imageUrl": "../Accets/images/clock-1.jpg",
+      "class": "clock"
+    },
+    {
+      "title": "ساعت مچی فری لوک",
+      "price": 765000,
+      "imageUrl": "../Accets/images/clock-3.jpg",
+      "class": "clock"
+    },
+    {
+      "title": "ساعت مچی چارمکس",
+      "price": 7580000,
+      "imageUrl": "../Accets/images/clock-2.jpg",
+      "class": "clock"
+    },
+    {
+      "title": "ساعت مچی فری لوک",
+      "price": 785000,
+      "imageUrl": "../Accets/images/clock-4.jpg",
+      "class": "clock"
+    },
+
+    {
+      "title": "گردنبند طلا مادر و فرزند",
+      "price": 1660000,
+      "imageUrl": "../Accets/images/gold-1.webp",
+      "class": "gold"
+    },
+    {
+      "title": "گردنبند طلا طرح LV",
+      "price": 5739000,
+      "imageUrl": "../Accets/images/gold-2.webp",
+      "class": "gold"
+    },
+    {
+      "title": "آویز طلا طرح قلب تیفانی",
+      "price": 5700000,
+      "imageUrl": "../Accets/images/gold-3.webp",
+      "class": "gold"
+    },
+    {
+      "title": "گردنبند طلا طرح بولگاری",
+      "price": 14455000,
+      "imageUrl": "../Accets/images/gold-4.webp",
+      "class": "gold"
+    },
+
+    {
+      "title": "کت تک مردانه مدل اهورا",
+      "price": 990000,
+      "imageUrl": "../Accets/images/coat-1.jpg",
+      "class": "coat"
+    },
+    {
+      "title": "کت تک مردانه مدل G21",
+      "price": 530000,
+      "imageUrl": "../Accets/images/coat-2.jpg",
+      "class": "coat"
+    },
+    {
+      "title": "کت تک مردانه مدل K24",
+      "price": 1580000,
+      "imageUrl": "../Accets/images/coat-3.jpg",
+      "class": "coat"
+    },
+    {
+      "title": "کت تک مردانه مدل SD-06",
+      "price": 1280000,
+      "imageUrl": "../Accets/images/coat-4.jpg",
+      "class": "coat"
+    }
+  ]
+}
