@@ -1,11 +1,12 @@
+let allProducts = [];
+let inputInnerText = "";
 const productsDOM = document.querySelector(".products-block");
+const notification = document.querySelector(".notification");
 const inputBox = document.getElementById("input-box");
 const allProductsBtn = document.getElementById("all-products-btn");
 const justCoatsBtn = document.getElementById("just-coats-btn");
 const justGoldsBtn = document.getElementById("just-golds-btn");
 const justClockBtn = document.getElementById("just-clocks-btn");
-let allProducts = [];
-let inputInnerText = "";
 
 // npm install -g json-server
 // json-server --watch db.json
@@ -32,37 +33,7 @@ inputBox.addEventListener("input", (e) => {
   }
 });
 
-function filterProducts() {
-  allProductsBtn.addEventListener("click", () => {
-    productsDOM.innerHTML = "";
-    inputBox.value = "";
-    showProducts(allProducts);
-  });
-  justClockBtn.addEventListener("click", () => {
-    productsDOM.innerHTML = "";
-    allProducts.forEach((item) => {
-      if (item.class == "clock") {
-        showProducts([item]);
-      }
-    });
-  });
-  justCoatsBtn.addEventListener("click", () => {
-    productsDOM.innerHTML = "";
-    allProducts.forEach((item) => {
-      if (item.class == "coat") {
-        showProducts([item]);
-      }
-    });
-  });
-  justGoldsBtn.addEventListener("click", () => {
-    productsDOM.innerHTML = "";
-    allProducts.forEach((item) => {
-      if (item.class == "gold") {
-        showProducts([item]);
-      }
-    });
-  });
-}
+// UI - Show products
 function showProducts(products) {
   let result = "";
   products.forEach((item) => {
@@ -77,5 +48,36 @@ function showProducts(products) {
     productsDOM.appendChild(productBlock);
   });
 }
+// Notification
+function notificationShow() {
+  notification.classList.toggle("notificationShow");
+  setTimeout(() => notification.classList.remove("notificationShow"), 1500);
+}
+// Show filtered products
+function filter(value) {
+  allProducts.forEach((item) => {
+    if (item.class == value) showProducts([item]);
+  });
+}
 
-filterProducts();
+// Buttons Listener
+allProductsBtn.addEventListener("click", () => {
+  productsDOM.innerHTML = "";
+  inputBox.value = "";
+  showProducts(allProducts);
+});
+justClockBtn.addEventListener("click", () => {
+  productsDOM.innerHTML = "";
+  notificationShow();
+  filter("clock");
+});
+justCoatsBtn.addEventListener("click", () => {
+  notificationShow();
+  productsDOM.innerHTML = "";
+  filter("coat");
+});
+justGoldsBtn.addEventListener("click", () => {
+  notificationShow();
+  productsDOM.innerHTML = "";
+  filter("gold");
+});
